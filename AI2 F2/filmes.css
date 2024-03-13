@@ -1,0 +1,292 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    
+
+}
+
+header h1 {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header-buttons {
+    margin-top: 10px;
+}
+
+.header-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+
+.header-button:hover {
+    background-color: #444;
+}
+
+
+h1 {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+
+.movie-item {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    width: calc(33.333% - 20px);
+    width: 200px;
+    border: 3px grey solid;
+    border-radius: 15px;
+}
+
+
+.movie-cover {
+
+    margin: 3px;
+}
+
+.movie-title {
+    margin: 0 0 10px;
+}
+
+.movie-genre {
+    color: #666;
+    font-size: 0.8rem;
+    margin: 0 0 10px;
+}
+
+.movie-runtime {
+    color: #666;
+    font-size: 0.8rem;
+    margin: 0 0 10px;
+}
+
+.watch-now-button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 0 10px;
+    cursor: pointer;
+    
+    margin-left: 15%;
+    margin-bottom: 0%;
+}
+
+.watch-now-button:hover {
+    background-color: #45a049;
+}
+
+
+
+.logo {
+    font-size: x-large;
+    color: white;
+    display: flex;
+    float: left;
+    margin-left: 3%;
+    
+
+}
+
+.other {
+    font-size: x-large;
+    color: white;
+    display: flex;
+    float: right;
+    margin-right: 5%;
+    
+
+}
+
+
+
+
+
+
+.slideshow {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: slideShow 20s infinite;
+  opacity: 0;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 10s;
+}
+
+@keyframes slideShow {
+  0% {opacity: 1;}
+  8.33% {opacity: 1;}
+  16.66% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  width: 100%;
+
+}
+
+
+
+
+
+
+
+
+.filter-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+  
+  .filter-button:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .filter-button.active {
+    background-color: #ddd;
+  }
+
+
+
+
+
+
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+  }
+  
+  .footer-content {
+    flex-basis: 60%;
+    
+    align-self: center;
+    margin-left: 20%;
+    
+  }
+  
+  .footer-content p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: 22%;
+  }
+  
+  .contact-info li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info i {
+    margin-right: 5px;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+  
+  .social-media {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .social-media a {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  
+  .social-media a:hover {
+    color: #ccc;
+  }
+
+
+
+
+
+
+
