@@ -4,7 +4,7 @@ import axios from "axios";
 import React ,{useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 
-const baseUrl = "http://localhost:8080";
+const baseUrl = "http://localhost:3000";
 
 export default function UpdateGenre(){
 

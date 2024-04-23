@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import React ,{useEffect, useState} from "react";
 import Swal from 'sweetalert2'
 
-const baseUrl = "http://localhost:8080";
+const baseUrl = "http://localhost:3000";
 
 export default function ListMovie(){
     const [Movie, setMovie] = useState([]);

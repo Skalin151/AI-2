@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React ,{useEffect, useState} from "react";
 import axios from 'axios';
 
-const baseUrl = "http://localhost:8080";
+const baseUrl = "http://localhost:3000";
 
 export default function CreateMovie(){
     

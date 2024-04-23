@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 import { data } from 'jquery';
 
 
-const baseUrl = "http://localhost:8080";
+const baseUrl = "http://localhost:3000";
 
 export default function ListGenre(){
 

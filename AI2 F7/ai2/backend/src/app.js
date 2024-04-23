@@ -22,6 +22,6 @@ app.use('/', (req, res) => {
     app.use('/movie', movieRoute)
 })
 app.listen(app.get('port'), () => {
-    console.log("Start server on port " + app.get('port'));
+    console.log("Server on port: " + app.get('port'));
 })
 
