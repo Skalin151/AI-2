@@ -78,4 +78,6 @@ controllers.genre_get = async(req, res) => {
     res.json({ success: true, data: data});
 }
 
+
+
 module.exports = controllers;

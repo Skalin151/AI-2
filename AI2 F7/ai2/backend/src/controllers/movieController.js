@@ -1,5 +1,5 @@
-var Genre = require('../models/Genre');
-var Movie = require('../models/Movie');
+var Genre = require('../models/genre');
+var Movie = require('../models/movie');
 var sequelize = require('../models/database');
 const controllers = {}
 sequelize.sync()
@@ -10,7 +10,7 @@ controllers.movie_create = async(req, res) => {
         title: title,
         photo: photo,
         description: description,
-        genreId: genre
+        genre: genre
     })
     .then(function(data) {
         return data
@@ -34,7 +34,7 @@ controllers.movie_list = async(req, res) => {
     .catch(error => {
         return error;
     });
-    res.json({ success: true, data: data });
+    res.json({ success: true, data: data,});
 }
 
 controllers.movie_update = async(req, res) => {
@@ -44,7 +44,7 @@ controllers.movie_update = async(req, res) => {
             title: title,
             photo: photo,
             description: description,
-            genreId: genre
+            genre: genre
         }, {where:  { id: id}})
     .then(function(data) {
         return data;
@@ -87,5 +87,6 @@ controllers.movie_get = async(req, res) => {
 
     res.json({ success: true, data: data });
 }
-
 module.exports = controllers;
+
+

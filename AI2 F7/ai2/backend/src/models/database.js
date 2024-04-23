@@ -13,5 +13,6 @@ const sequelize = new Sequelize(
 
 sequelize.sync();
 
+console.log('Conectado ao banco de dados');
 
 module.exports = sequelize;

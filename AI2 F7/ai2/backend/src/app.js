@@ -3,6 +3,7 @@ const app = express();
 
 const genreRoute = require('./routes/genreRoute');
 const movieRoute = require('./routes/movieRoute');
+
 app.set('port', process.env.PORT||3000);
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -23,3 +24,4 @@ app.use('/', (req, res) => {
 app.listen(app.get('port'), () => {
     console.log("Start server on port " + app.get('port'));
 })
+
