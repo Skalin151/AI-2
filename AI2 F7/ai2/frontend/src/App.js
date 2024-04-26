@@ -10,10 +10,11 @@ import ListGenre from './view/listGenre';
 import UpdateGenre from './view/updateGenre';
 
 
+
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App ">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <Link className='navbar-brand' to = '/movie/list'>MyMovies</Link>
           <button class="navbar-toggler" type="button" datatoggle="collapse" data-target="#navbarSupportedContent" ariacontrols="navbarSupportedContent" aria-expanded="false" arialabel="Toggle navigation">
