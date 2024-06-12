@@ -10,13 +10,21 @@ var Genre = SequelizeDB.define('genre', {
         allowNull:false
     },
     description: Sequelize.STRING,
+<<<<<<< HEAD
     unique: true
+=======
+    
+>>>>>>> 08a89208e55edebcaf36460d1352a4057550b9e6
 },
 {
     timestamps: false,
 });
 
+<<<<<<< HEAD
 
+=======
+/*
+>>>>>>> 08a89208e55edebcaf36460d1352a4057550b9e6
 const genre1 = new Genre({
     description: 'Fantasia'
   });
@@ -40,7 +48,11 @@ const genre1 = new Genre({
       console.log(`Género criado com sucesso: ${genre.description}`);
     }
   });
+<<<<<<< HEAD
 
+=======
+*/
+>>>>>>> 08a89208e55edebcaf36460d1352a4057550b9e6
 
 Genre.sync();
 
