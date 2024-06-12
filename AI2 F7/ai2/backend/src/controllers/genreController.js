@@ -17,7 +17,7 @@ controllers.genre_create = async(req, res) => {
 
     res.status(200).json({
         success: true,
-        message: "Genre created",
+        message: "Genre added!",
         data: data
     });
 }
@@ -45,7 +45,7 @@ controllers.genre_update = async(req, res) => {
     .catch(error => {
         return error;
     })
-    res.json({ success: true, data: data, message: "Genre successfully updated!"});
+    res.json({ success: true, data: data, message: "Genre updated!"}); //Debug
 }
 
 controllers.genre_delete = async(req, res) => {
@@ -61,7 +61,7 @@ controllers.genre_delete = async(req, res) => {
         return error;
     })
 
-    res.json({success: act, message: "Genre removed!"})
+    res.json({success: act, message: "Genre removed!"}) //Debug
 }
 
 controllers.genre_get = async(req, res) => {

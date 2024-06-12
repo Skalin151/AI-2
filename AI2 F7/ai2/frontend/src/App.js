@@ -8,31 +8,32 @@ import UpdateMovie from './view/updateMovie';
 import CreateGenre from './view/createGenre';
 import ListGenre from './view/listGenre';
 import UpdateGenre from './view/updateGenre';
+<link rel="stylesheet" href='App.css'></link>
 
 
 
 function App() {
   return (
     <Router>
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
       <div className="App ">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className='navbar-brand' to = '/movie/list'>MyMovies</Link>
           <button class="navbar-toggler" type="button" datatoggle="collapse" data-target="#navbarSupportedContent" ariacontrols="navbarSupportedContent" aria-expanded="false" arialabel="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link" to="/movie/list">Movies</Link>
+              <li className="nav-item" class="nav-button">
+                <Link className="nav-link" to="/movie/list"><b>Filmes</b></Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/movie/create">Add Movie</Link>
+                <Link className="nav-link" to="/movie/create"><b>Adicionar Filme</b></Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/genre/list">Genres</Link>
+                <Link className="nav-link" to="/genre/list"><b>Géneros</b></Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/genre/create">Add Genre</Link>
+                <Link className="nav-link" to="/genre/create"><b>Adicionar Género</b></Link>
               </li>
             </ul>
           </div>

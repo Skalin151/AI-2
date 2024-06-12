@@ -39,7 +39,7 @@ export default function ListGenre(){
             <thead className = "thead-dark">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Genre</th>
+                    <th scope="col">Género</th>
                 </tr>
             </thead>
             <tbody>
@@ -55,10 +55,10 @@ export default function ListGenre(){
                 <th>{index + 1}</th>
                 <td>{data.description}</td>
                 <td>
-                    <Link className='btn btn-outline-info' to = {"/genre/update/" + data.id}>Update</Link>
+                    <Link className='btn btn-outline-info' to = {"/genre/update/" + data.id}>Editar</Link>
                 </td>
                 <td>
-                    <button className='btn btn-outline-danger' onClick={() => onDelete(data.id)}>Delete</button>
+                    <button className='btn btn-outline-danger' onClick={() => onDelete(data.id)}>Apagar</button>
                 </td>
             </tr>
         )
@@ -67,19 +67,19 @@ export default function ListGenre(){
 
     function onDelete(genre){
         Swal.fire({
-            title: 'Are you sure?',
-            text: 'It won\'t be able to recover it later!',
+            title: 'Tem a certeza?',
+            text: 'Esta ação é irreversível!',
             type: 'warning',
             showCancelButton: true,
-            confirmButtonText: 'Yes, delete!',
-            cancelButtonText: 'No, keep'
+            confirmButtonText: 'Sim, apagar!',
+            cancelButtonText: 'Não, manter'
         }).then((result) => {
             if (result.value) {
                 sendDelete(genre)
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 Swal.fire(
-                'Canceled',
-                'Genre was not deleted',
+                'Operação cancelada',
+                'Género não foi apagado',
                 'error'
                 )
             }
@@ -92,16 +92,16 @@ export default function ListGenre(){
         .then(response =>{
             if (response.data.success){
                 Swal.fire(
-                    'Deleted!',
-                    'Genre was removed.',
+                    'Apagado!',
+                    'Género foi removido.',
                     'success'
                 )
                 LoadGenre();
             }
             else{
                 Swal.fire(
-                    'Canceled',
-                    'Genre is assosiated to a movie!',
+                    'Cancelado',
+                    'Género associado a um filme!',
                     'error'
                 )
             }

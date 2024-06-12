@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import React ,{useEffect, useState} from "react";
 import Swal from 'sweetalert2'
 
+
 const baseUrl = "http://localhost:3000";
 
 export default function ListMovie(){
@@ -36,10 +37,10 @@ export default function ListMovie(){
             <thead className = "thead-dark">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Photo</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Genre</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Género</th>
                 </tr>
             </thead>
 
@@ -49,42 +50,42 @@ export default function ListMovie(){
         </table>
     );
 
-    function LoadFillData(){
+    function LoadFillData() {
         return Movie.map((data, index) => {
-            return(
-                <tr key = {index}>
-                    <th>{index + 1}</th>
-                    <td>{data.title}</td>
-                     <td> <img alt = 'MoviePhoto' style = {{width: '75px'}} src={data.photo}/> </td>
-                    <td>{data.description}</td>
-                    <td>{data.genre.description}</td>
-                    <td>
-                    <Link className='btn btn-outline-info' to = {"/movie/update/" + data.id}>Edit
-                    </Link>                    
-                    </td>
-                    <td>
-                        <button className='btn btn-outline-danger' onClick={() => onDelete(data.id)}>Delete</button>
-                    </td>
-                </tr>
-        )
+          return (
+            <tr key={index}>
+              <th>{index + 1}</th>
+              <td>{data.title}</td>
+              <td> <img alt='MoviePhoto' style={{ width: '75px' }} src={data.photo} /> </td>
+              <td>{data.description}</td>
+              <td>{data.genre? data.genre.description : ''}</td>
+              <td>
+                <Link className='btn btn-outline-info' to={"/movie/update/" + data.id}>Editar
+                </Link>
+              </td>
+              <td>
+                <button className='btn btn-outline-danger' onClick={() => onDelete(data.id)}>Apagar</button>
+              </td>
+            </tr>
+          )
         });
     }
 
     function onDelete(movie){
         Swal.fire({
-            title: 'Are you sure?',
-            text: 'You won\'t be able to view it afterwards!',
+            title: 'Tem a certeza?',
+            text: 'Esta ação é irreversível!',
             type: 'warning',
             showCancelButton: true,
-            confirmButtonText: 'Yes, Delete!',
-            cancelButtonText: 'No, keep it'
+            confirmButtonText: 'Sim, apagar!',
+            cancelButtonText: 'Não, manter'
         }).then((result) => {
             if (result.value){
                 sendDelete(movie)
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 Swal.fire(
-                'Canceled',
-                'Movie was not deleted',
+                'Operação cancelada',
+                'Filme não foi apagado',
                 'error'
                 )
             }
@@ -97,8 +98,8 @@ export default function ListMovie(){
     .then(response =>{
             if (response.data.success) {
                 Swal.fire(
-                    'Deleted!',
-                    'The movie has been removed',
+                    'Apagado!',
+                    'Filme foi removido.',
                     'success'
                 )
                 LoadMovie();
